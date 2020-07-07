@@ -2,7 +2,7 @@
 
 A JavaFX desktop application for tracking the prices of items from Amazon. Users can create and sign in by authenticating their account credentials with MySQL. Create and save product information as a list fetched from Amazon.
 
-![Screenshot](https://github.com/alvinkw/AmazonPriceTracker/blob/master/Screenshot.png)
+![Screenshot](https://github.com/alvinkw/AmazonPriceTracker/blob/master/screenshot.png)
 
 ## Getting Started
 
