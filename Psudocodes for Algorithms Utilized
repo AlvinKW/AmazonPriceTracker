@@ -1,0 +1,110 @@
+Pseudocodes:
+
+LoginController Class:
+
+signinPressed:
+input: action event
+output: error message if incorrect credentials, else allow user
+to use app after successful login
+
+Set progress animation to visible to show logging in
+
+Connect to database
+Select all names and password from users table on database
+Execute query to see if user input matches database 
+
+If username and password matches
+	Login is successful
+	Transition to Price Tracker App Scene
+Else 
+	Alert User unsuccessful login
+	
+------------------------------------------------------------------------
+
+signupPressed:
+input: action event
+output: Transition to sign up page
+
+Transition to Signup page
+
+------------------------------------------------------------------------
+
+SignUpController Class:
+
+signupButtonPressed:
+input: action event
+output: Transition to login screen, else reprompt user 
+
+Play loading animation when button is pressed
+
+Insert user's entered name and password in to MySql database
+Connect to database
+Update users table in MySql database
+Transition to login page
+
+------------------------------------------------------------------------
+
+TrackerController Class:
+
+addButtonPressed:
+input: action event
+output: error if invalid data, else updated UI for table view 
+
+Get product name, price, and website link
+
+Create a MySQL function to insert the name, price, and link into item table in database
+
+Connect to MySQL database
+
+Insert product data to database
+
+Clear table view
+
+Load data from MySQL database into table view
+
+------------------------------------------------------------------------
+
+deleteButtonPressed:
+input: action Event
+ouput: removed item from database and update UI, else null
+
+Get currently selected item from table view
+Connect to database
+Delete from items table in MySQL database where name matches table row item
+If selected item is not null
+	Remove item from database
+	Update tableview UI with new data from database
+	
+------------------------------------------------------------------------
+
+goButtonPressed:
+input: action event
+output: opened url in default browser
+
+Get currently selected item from table view
+Connect to Database
+Get currently selected item url link from MySQL database
+Open url in web browser
+
+------------------------------------------------------------------------
+
+getItem:
+input: N/A
+output: ItemTableModel object (item, price, url)
+
+Get css selector of item title
+Get css selector of item price
+
+If user input is not empty
+	Get url from user input
+	Select page element where title is
+	Select page element where price is
+	
+	Create new ItemTableModel object
+	Return object
+Else
+	Return null
+	
+------------------------------------------------------------------------
+
+	

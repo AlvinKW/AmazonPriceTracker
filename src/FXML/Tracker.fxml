@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="340.0" style="-fx-background-color: -fx-background-color: linear-gradient(to right,#FF3366,#BA265D);-fx-background-color: linear-gradient(to right,#FF3366,#BA265D);;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TrackerController">
+   <children>
+      <TextField fx:id="linkTextBox" layoutX="14.0" layoutY="377.0" opacity="0.9" prefHeight="45.0" prefWidth="149.0" promptText="Insert Link" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <JFXButton layoutX="177.0" layoutY="377.0" onAction="#addButtonPressed" prefHeight="45.0" prefWidth="44.0" style="-fx-border-color: white; -fx-background-radius: 10; -fx-border-radius: 100;" text="+" textFill="WHITE" />
+      <JFXButton layoutX="229.0" layoutY="377.0" onAction="#deleteButtonPressed" prefHeight="45.0" prefWidth="44.0" style="-fx-border-color: white; -fx-background-radius: 10; -fx-border-radius: 100;" text="-" textFill="WHITE" />
+      <TableView fx:id="table" layoutX="14.0" layoutY="14.0" opacity="0.93" prefHeight="338.0" prefWidth="312.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="itemColumn" prefWidth="226.0" text="Item" />
+          <TableColumn fx:id="priceColumn" prefWidth="85.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="280.0" layoutY="377.0" onAction="#goButtonPressed" prefHeight="45.0" prefWidth="44.0" style="-fx-border-color: white; -fx-background-radius: 10; -fx-border-radius: 100;" text="GO" textFill="WHITE" />
+   </children>
+</AnchorPane>

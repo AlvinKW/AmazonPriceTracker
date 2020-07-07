@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane maxWidth="1.7976931348623157E308" prefHeight="450.0" prefWidth="314.0" style="-fx-background-color: linear-gradient(to right,#FF3366,#BA265D);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <JFXTextField fx:id="username" layoutX="85.0" layoutY="165.0" promptText="Username" style="-fx-prompt-text-fill: white;" unFocusColor="WHITE">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff0061" />
+                  <Stop color="#f6ff00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+      </JFXTextField>
+      <JFXPasswordField fx:id="password" layoutX="85.0" layoutY="218.0" promptText="Password" style="-fx-prompt-text-fill: white;" unFocusColor="WHITE">
+         <focusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff0062" />
+                  <Stop color="#ff0062" offset="0.007518796992481203" />
+                  <Stop color="#e2ff00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </focusColor>
+      </JFXPasswordField>
+      <JFXButton fx:id="signup" layoutX="239.0" layoutY="14.0" onAction="#signupPressed" style="-fx-background-color: #BA265E;" text="Sign Up" textFill="WHITE" />
+      <JFXButton fx:id="signin" layoutX="85.0" layoutY="286.0" onAction="#signinPressed" prefHeight="27.0" prefWidth="145.0" style="-fx-background-color: white;" text="Sign In" textFill="#ba265e" />
+      <ImageView fitHeight="27.0" fitWidth="51.0" layoutX="49.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/user-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="51.0" layoutX="49.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/lock-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="progress" fitHeight="27.0" fitWidth="19.0" layoutX="239.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/loader.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
